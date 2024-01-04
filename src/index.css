@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.app {
+  width: 100vw;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~NAVBAR~~~~~~~~~~~~~~~~~~~ */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+  padding: 1vw 2vw;
+  background-color: black;
+  position: sticky;
+  top: 0;
+}
+.navbar h1 {
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+}
+.navlinks {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+.navlinks a {
+  color: white;
+  text-decoration: none;
+  padding: 0.8vw;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+}
+.active {
+  background-color: grey;
+  color: black;
+}
+
+@media screen and (width<768px) {
+  .navbar h1 {
+    font-size: 3vw;
+  }
+  .navlinks a {
+    font-size: 2.2vw;
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~PRODUCTS~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  margin: auto;
+  /* background-color: aquamarine; */
+  gap: 2vw;
+  box-sizing: border-box;
+}
+.home h2,
+.main h2 {
+  color: #000;
+  text-align: center;
+  font-size: 4vw;
+  font-weight: 700;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1vw;
+  box-sizing: border-box;
+}
+.card img {
+  width: 270px;
+  height: 330px;
+  flex-shrink: 0;
+  padding: 10px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid black;
+  /* max-height: 450px;*/
+  min-height: 450px;
+  max-width: 270px;
+  margin-bottom: 15px;
+}
+.product-details {
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  gap: 5px;
+}
+.product-details p {
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+}
+.card button {
+  border: none;
+  background-color: black;
+  color: white;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~MYCART~~~~~~~~~~~~~~~ */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mycart {
+  display: flex;
+  width: 90vw;
+  margin: auto;
+  margin-top: 20px;
+}
+.cart {
+  flex: 5;
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2vw;
+  box-sizing: border-box;
+}
+.checkout {
+  flex: 2;
+  background-color: black;
+  color: white;
+  height: 70vh;
+}
+
+.cart-card img {
+  width: 280px;
+  height: 280px;
+  flex-shrink: 0;
+  padding: 10px;
+}
+.cart-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid black;
+  /* max-height: 450px;*/
+  min-height: 380px;
+  max-height: 381px;
+  min-width: 280px;
+}
+.cart-product-details {
+  padding: 10px;
+  box-sizing: border-box;
+  gap: 5px;
+}
+.cart-product-details p {
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+}
+.cart-card button {
+  border: none;
+  background-color: black;
+  color: white;
+  height: 30px;
+  cursor: pointer;
+}
+.checkout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 1vw;
+  box-sizing: border-box;
+}
+.checkout h3 {
+  font-size: 2.5vw;
+  font-weight: 400;
+  color: white;
+  margin: 10px 0;
+}
+.list {
+  width: 100%;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.list-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-items p,
+.total p {
+  font-size: 1.8vw;
+}
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.checkout button {
+  width: 80%;
+  padding: 0.5vw;
+  margin-top: 10px;
+}
+
+@media screen and (width < 500px) {
+  .mycart {
+    flex-direction: column;
+    gap: 5vw;
+  }
+  .cart {
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+  }
+  .list-items p,
+  .total p {
+    font-size: 14px;
+  }
+  .checkout h3 {
+    font-size: 20px;
+  }
+  .main h2 {
+    font-size: 24px;
+  }
+}
